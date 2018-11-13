@@ -4,11 +4,13 @@ div {
 }
 
 
-figure {
-    
-}
 
 div.container {
     display: flex;
     justify-content: center;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1.2rem;
 }

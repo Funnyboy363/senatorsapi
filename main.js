@@ -27,6 +27,9 @@ console.log(`There are ${males.length} men in the Senate and ${females.length} w
 
 const senWithPics = senators.map(senator => {
     senator.imgURL = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
+    if(senator.govtrack_id === '412743') {
+        senator.imgURL = `https://localhost:5500/images/cindy.jpg`
+    }
     return senator
 })
 
@@ -37,6 +40,7 @@ senWithPics.forEach(senator => {
     let senatorPic = document.createElement('img')
     let senatorFig = document.createElement('figure')
     let senatorCap = document.createElement('figcaption')
+    senatorCap.textContent = `${senator.first_name} ${senator.last_name}`
     senatorPic.src = senator.imgURL
     senatorFig.appendChild(senatorPic)
     senatorFig.appendChild(senatorCap)
