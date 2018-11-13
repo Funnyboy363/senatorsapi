@@ -1,10 +1,14 @@
 div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 
 figure {
-    display: inline;
-    width: 220px;
+    
 }
 
+div.container {
+    display: flex;
+    justify-content: center;
+}
