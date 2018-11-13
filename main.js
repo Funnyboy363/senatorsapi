@@ -25,7 +25,7 @@ console.log(`The most loyal democrat is ${loyalDemocrat.first_name} ${loyalDemoc
 console.log(`There are ${males.length} men in the Senate and ${females.length} women.`)
 
 
-const senWithPics = senators.map(senators => {
+const senWithPics = senators.map(senator => {
     senator.imgURL = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
     return senator
 })
@@ -35,6 +35,11 @@ let pictureDiv = document.querySelector('.container')
 
 senWithPics.forEach(senator => {
     let senatorPic = document.createElement('img')
+    let senatorFig = document.createElement('figure')
+    let senatorCap = document.createElement('figcaption')
     senatorPic.src = senator.imgURL
-    pictureDiv.appendChild(senatorPic)
+    senatorFig.appendChild(senatorPic)
+    senatorFig.appendChild(senatorCap)
+    pictureDiv.appendChild(senatorFig)
 })
+
