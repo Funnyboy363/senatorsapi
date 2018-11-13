@@ -28,7 +28,7 @@ console.log(`There are ${males.length} men in the Senate and ${females.length} w
 const senWithPics = senators.map(senator => {
     senator.imgURL = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
     if(senator.govtrack_id === '412743') {
-        senator.imgURL = `https://localhost:5500/images/cindy.jpg`
+        senator.imgURL = `https://bloximages.newyork1.vip.townnews.com/djournal.com/content/tncms/assets/v3/editorial/d/f6/df6a5b09-1d8d-58ec-9bef-2c6d5877fbca/5b553847030fe.image.jpg`
     }
     return senator
 })
