@@ -1,0 +1,10 @@
+div {
+    display: flex;
+}
+
+
+figure {
+    display: inline;
+    width: 220px;
+}
+
