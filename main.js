@@ -23,3 +23,18 @@ console.log(`The most loyal repuclican is ${loyalRepublican.first_name} ${loyalR
 console.log(`The most loyal democrat is ${loyalDemocrat.first_name} ${loyalDemocrat.last_name} from ${loyalDemocrat.state} who votes with republicans ${loyalDemocrat.votes_with_party_pct}% of the time.`)
 
 console.log(`There are ${males.length} men in the Senate and ${females.length} women.`)
+
+
+const senWithPics = senators.map(senators => {
+    senator.imgURL = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
+    return senator
+})
+
+console.log(senWithPics)
+let pictureDiv = document.querySelector('.container')
+
+senWithPics.forEach(senator => {
+    let senatorPic = document.createElement('img')
+    senatorPic.src = senator.imgURL
+    pictureDiv.appendChild(senatorPic)
+})
